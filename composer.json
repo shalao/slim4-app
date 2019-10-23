@@ -10,7 +10,8 @@
         "nyholm/psr7-server": "^0.3.0",
         "php-di/php-di": "^6.0",
         "catfan/medoo": "^1.6",
-        "slim/twig-view": "^2.5"
+        "slim/twig-view": "^2.5",
+        "monolog/monolog": "^2.0"
 
     },
     "autoload": {
@@ -18,7 +19,7 @@
             "App\\": "app/"
         },
         "files": [
-            "app/common/functions.php"
+            "app/Common/functions.php"
         ]
 
     }

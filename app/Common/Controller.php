@@ -18,7 +18,9 @@ class Controller
     protected $db = null;
     // Twig模板引擎
     protected $view = null;
-
+   
+    protected $logger = null;
+    
     protected $response = null;
 
     /**
@@ -33,6 +35,9 @@ class Controller
         $this->db = $container->get('db');
         // 模板引擎依赖
         $this->view = $container->get('view');
+        
+        $this->logger = $container->get('logger');
+  
     }
 
     /**

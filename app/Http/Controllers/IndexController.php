@@ -28,10 +28,15 @@ class IndexController extends Controller
      * @return Response
      */
     public function db( Request $request, Response $response) {
-        $data = $this->db->select('user', ['id', 'username', 'password']);
-        $data = (new User($this->db))->get();
-        var_dump($data);
+        //$data = $this->db->select('user', ['id', 'username', 'password']);
+        //$data = $this->db->select('user', ['id','username'],["user_id[>]" => 100]);
+     
+        //$data = (new User($this->db))->get();
+//        var_dump($data);
 //        var_dump((new Base($this->db))->get());
+        var_dump($this->db->log() ); 
+        $response->getBody()->write($request->getMethod());   
+        $this->logger->warning('Foo',['aff'=>'fff']); 
         return $response;
     }
 
